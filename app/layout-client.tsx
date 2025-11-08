@@ -1,11 +1,13 @@
 'use client';
 
-import { Geist, Geist_Mono } from "next/font/google";
-
 interface RootLayoutClientProps {
   children: React.ReactNode;
-  geistSans: ReturnType<typeof Geist>;
-  geistMono: ReturnType<typeof Geist_Mono>;
+  geistSans: {
+    variable: string;
+  };
+  geistMono: {
+    variable: string;
+  };
 }
 
 export default function RootLayoutClient({
@@ -16,6 +18,7 @@ export default function RootLayoutClient({
   return (
     <body
       className={`${geistSans.variable} ${geistMono.variable} flex flex-col antialiased min-h-screen`}
+      suppressHydrationWarning={true}
     >
       {children}
     </body>
