@@ -1,0 +1,59 @@
+# Vercel Ignore File
+# Files to exclude from Vercel deployments
+
+# Documentation
+README.md
+QUICKSTART.md
+DEPLOYMENT_GUIDE.md
+DEPLOYMENT_PLAN.md
+QUICK_DEPLOY.md
+SETUP_COMPLETE.md
+HYDRATION_FIX.md
+
+# Development files
+.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+.yarn/cache
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.coverage
+coverage/
+*.lcov
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.circleci/
+.travis.yml
+
+# Misc
+*.log
+.env
+.cache
