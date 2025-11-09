@@ -2,8 +2,12 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { SITE_NAME } from '@/lib/constants';
+
+// Logo options: use '/logo.png' or '/logo2.png'
+const LOGO = '/logo.png';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,8 +24,9 @@ export default function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-blue-600">{SITE_NAME}</span>
+          <Link href="/" className="flex items-center gap-1">
+            <span className="text-2xl font-mono font-bold bg-gradient-to-r from-indigo-600 to-indigo-700 bg-clip-text text-transparent">&lt;/&gt;</span>
+            <span className="text-lg font-bold bg-gradient-to-r from-cyan-500 to-sky-600 bg-clip-text text-transparent" style={{ fontFamily: 'var(--font-ibm-plex)' }}>DEVSUPSKILL</span>
           </Link>
         </motion.div>
 
@@ -38,20 +43,6 @@ export default function Header() {
           ))}
         </div>
 
-        {/* CTA Button */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="hidden sm:block"
-        >
-          <Link
-            href="/signin"
-            className="rounded-lg bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700"
-          >
-            Sign In
-          </Link>
-        </motion.div>
 
         {/* Mobile Menu Button */}
         <button
@@ -94,13 +85,6 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/signin"
-              className="block rounded bg-blue-600 px-3 py-2 text-white hover:bg-blue-700"
-              onClick={() => setIsOpen(false)}
-            >
-              Sign In
-            </Link>
           </div>
         </motion.div>
       )}

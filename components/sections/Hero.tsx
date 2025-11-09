@@ -29,11 +29,11 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-white px-4 py-20 dark:from-gray-900 dark:to-gray-800 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden bg-gradient-to-br from-indigo-50 to-white px-4 py-20 dark:from-gray-900 dark:to-gray-800 sm:px-6 lg:px-8">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute h-96 w-96 rounded-full bg-blue-200 opacity-20 blur-3xl -top-10 -left-10 dark:bg-blue-900"></div>
-        <div className="absolute h-96 w-96 rounded-full bg-green-200 opacity-20 blur-3xl -bottom-10 -right-10 dark:bg-green-900"></div>
+        <div className="absolute h-96 w-96 rounded-full bg-indigo-200 opacity-20 blur-3xl -top-10 -left-10 dark:bg-indigo-900"></div>
+        <div className="absolute h-96 w-96 rounded-full bg-cyan-200 opacity-20 blur-3xl -bottom-10 -right-10 dark:bg-cyan-900"></div>
       </div>
 
       <motion.div
@@ -44,7 +44,7 @@ export default function Hero() {
       >
         {/* Badge */}
         <motion.div variants={itemVariants} className="mb-6">
-          <span className="inline-block rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700 dark:bg-blue-900 dark:text-blue-200">
+          <span className="inline-block rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-700 dark:bg-indigo-900 dark:text-indigo-200">
             🚀 Welcome to DevSupSkill
           </span>
         </motion.div>
@@ -109,12 +109,12 @@ export default function Hero() {
           className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3 border-t border-gray-200 pt-12 dark:border-gray-700"
         >
           {[
-            { number: '50+', label: 'Courses' },
-            { number: '10K+', label: 'Students' },
-            { number: '95%', label: 'Success Rate' },
+            { number: '50+', label: 'Courses', color: 'text-indigo-600 dark:text-indigo-400' },
+            { number: '10K+', label: 'Students', color: 'text-amber-500 dark:text-amber-400' },
+            { number: '95%', label: 'Success Rate', color: 'text-cyan-600 dark:text-cyan-400' },
           ].map((stat, i) => (
             <div key={i}>
-              <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">{stat.number}</p>
+              <p className={`text-3xl font-bold ${stat.color}`}>{stat.number}</p>
               <p className="text-gray-600 dark:text-gray-400">{stat.label}</p>
             </div>
           ))}

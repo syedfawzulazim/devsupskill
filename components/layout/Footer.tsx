@@ -32,7 +32,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-4">
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-1">
-            <h3 className="text-lg font-bold text-blue-600">{SITE_NAME}</h3>
+            <h3 className="text-lg font-bold bg-gradient-to-r from-indigo-600 to-cyan-600 bg-clip-text text-transparent">{SITE_NAME}</h3>
             <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
               Modern software development courses for the German-Bangladeshi market.
             </p>
@@ -49,7 +49,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
+                      className="text-sm text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400"
                     >
                       {link.label}
                     </Link>
@@ -72,7 +72,7 @@ export default function Footer() {
             {/* Social Links */}
             <a
               href="#"
-              className="text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+              className="text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400"
               aria-label="Twitter"
             >
               <span className="sr-only">Twitter</span>
@@ -82,7 +82,7 @@ export default function Footer() {
             </a>
             <a
               href="#"
-              className="text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+              className="text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400"
               aria-label="LinkedIn"
             >
               <span className="sr-only">LinkedIn</span>
